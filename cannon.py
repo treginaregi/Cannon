@@ -72,7 +72,7 @@ def move():
 
     for target in targets:
         if not inside(target):
-            # return aquí es el cambio
+            """El juego nunca termina """
             target.x = 200
 
     ontimer(move, 50)
