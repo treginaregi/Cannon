@@ -23,8 +23,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 900) / 25 #se cambio la velocidada del proyectil en x 
-        speed.y = (y + 900) / 25 #se cambio la velocidada del proyectil en y
+        speed.x = (x + 900) / 25 #se cambio la velocidada del proyectil y de los balones en el eje x 
+        speed.y = (y + 900) / 25 #se cambio la velocidada del proyectil y de los balones en el eje y
 
 
 def inside(xy):
@@ -70,7 +70,8 @@ def move():
 
     draw()
 
-    for target in targets:
+
+    for target in targets:#En vez de el return original se cambio para que el juego nunca pueda terminar
         if not inside(target):
             """El juego nunca termina """
             target.x = 200
